@@ -1,0 +1,3 @@
+# when use google chrome on Ubuntu RDP and cant run, use this command
+$ sudo chown -R runneradmin:runneradmin /home/runner/.config
+$ sudo google-chrome --no-sandbox
