@@ -17,8 +17,8 @@ jobs:
         sudo apt install libc6:amd64
     - name: Creating New User
       run: |
-        user=your_selected_account_name
-        password=your_supersecret_password
+        user=runneradmin
+        password=P@ssw0rd!
         sudo adduser --quiet --disabled-password --shell /bin/bash --home /home/$user --gecos "User" $user
         # set password
         echo "$user:$password" | sudo chpasswd
@@ -28,7 +28,7 @@ jobs:
     - name: Install Unzipper
       run: sudo apt-get install unzip -y
     - name: Ngrok Downloading(Linux)
-      run: wget -O ngrok.tgz https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-arm.tgz
+      run: wget -O ngrok.tgz https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz
     # run: wget -O ngrok.zip https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip
     - name: Ngrok Extracting(Linux)
       run: tar zxvf ngrok.tgz
